@@ -38,10 +38,7 @@ public class LeastPathResistance {
         int resRowCol[][] = new int[noOfrows][noOfColumns];
 
         if (b.length != noOfrows * noOfColumns) {
-            /*Log.d("LeastPathResistance","Invalid data 1");*/
-
-            System.out.println("Invalid data");
-            return "Invalid Data";
+            return INVALID_DATA;
         }
 
         int k = 0;
@@ -50,11 +47,7 @@ public class LeastPathResistance {
                 resRowCol[i][j] = Integer.parseInt(b[k]);
                 k++;
                 if (k > (noOfrows * noOfColumns)) {
-/*
-                    Log.d("LeastPathResistance","Invalid data 2");
-*/
-                    System.out.println("Invalid data");
-                    return "Invalid Data";
+                    return INVALID_DATA;
                 }
             }
         }
