@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">LeastPathResistanceApp</string>
+    <string name="RowValueHint">Enter the total number of rows</string>
+    <string name="ColValueHint">Enter the total number of Columns</string>
+    <string name="GridValuesHint">Enter the resistance values in a single line each seperated by spaces</string>
 </resources>
