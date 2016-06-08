@@ -1,7 +1,5 @@
 package com.pillar.leastpathresistanceapp;
 
-import android.util.Log;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
