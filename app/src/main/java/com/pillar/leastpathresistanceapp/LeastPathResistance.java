@@ -15,18 +15,7 @@ import java.util.Queue;
  */
 public class LeastPathResistance {
 
-    private int noOfRows;
-    private int noOfColumns;
-    private int[] inputData;
     final String INVALID_DATA = "Invalid Data";
-
-    public void inputRow(int rows) {
-
-        if (rows < 0)
-            return;
-        else
-            this.noOfRows = rows;
-    }
 
     public String printleastResistancePath(String data, int rows, int columns) {
 
@@ -69,9 +58,7 @@ public class LeastPathResistance {
         node.setTotalRes(resRowCol[x][y]);
 
         if (node.getTotalRes() >= 50) {
-            System.out.println(" Can not enter the path.Maximum resistance shown");
             System.exit(0);
-            ;
         }
 
 /*
@@ -169,7 +156,6 @@ public class LeastPathResistance {
                 nodeMap.put(uniqueNum3, node3);
             }
             if (node1.getTotalRes() >= 50 && node2.getTotalRes() >= 50 && node3.getTotalRes() >= 50) {
-                System.out.println("Can not continue due to high resistance path");
                 maxResReached = true;
                 noOfColumns = y1 + 1;
             }
@@ -211,7 +197,6 @@ public class LeastPathResistance {
                 tempres = tempres1;
                 pos = i;
             }
-
         }
         int tempUnique222 = (pos + (noOfColumns - 1)) * (pos + (noOfColumns - 1) + 1) + (noOfColumns - 1);
 
@@ -261,7 +246,6 @@ public class LeastPathResistance {
 
                 }
             nodesinResultPath.add(currnode);
-
         }
         String yesNo = "";
         if (maxResReached == false) {
@@ -271,14 +255,11 @@ public class LeastPathResistance {
         }
         finalLeastPathString = "" + yesNo + " " + " " + finalPathRes + " ";
 
-
         Collections.reverse(nodesinResultPath);
-
 
         for (Node node111 : nodesinResultPath) {
             finalLeastPathString = finalLeastPathString + " " + (node111.getX() + 1);
         }
-        System.out.println("Final Result is " + finalLeastPathString);
         return finalLeastPathString;
     }
 }
