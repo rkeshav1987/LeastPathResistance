@@ -31,6 +31,6 @@ public class LeastPathResistanceTest {
         LeastPathResistance leastPathResistance = new LeastPathResistance();
         String data="19 10 19 10 19 21 23 20 19 12 20 12 20 11 10";
         String result = leastPathResistance.printleastResistancePath(data, 3, 5);
-        assertEquals("NO    1 1 1",result);
+        assertEquals("NO  48  1 1 1",result);
     }
 }
