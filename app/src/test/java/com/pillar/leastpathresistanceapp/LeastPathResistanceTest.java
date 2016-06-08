@@ -13,7 +13,6 @@ public class LeastPathResistanceTest {
     public void testInvalidData() {
 
         LeastPathResistance leastPathResistance = new LeastPathResistance();
-
         String data = "1 2 3 4 5 6";
         String result = leastPathResistance.printleastResistancePath(data, 5, 6);
         assertEquals("Invalid Data", result);
