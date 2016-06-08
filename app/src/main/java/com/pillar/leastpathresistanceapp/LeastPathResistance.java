@@ -1,5 +1,7 @@
 package com.pillar.leastpathresistanceapp;
 
+import android.util.Log;
+
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,6 +38,8 @@ public class LeastPathResistance {
         int resRowCol[][] = new int[noOfrows][noOfColumns];
 
         if (b.length != noOfrows * noOfColumns) {
+            /*Log.d("LeastPathResistance","Invalid data 1");*/
+
             System.out.println("Invalid data");
             return "Invalid Data";
         }
@@ -46,6 +50,9 @@ public class LeastPathResistance {
                 resRowCol[i][j] = Integer.parseInt(b[k]);
                 k++;
                 if (k > (noOfrows * noOfColumns)) {
+/*
+                    Log.d("LeastPathResistance","Invalid data 2");
+*/
                     System.out.println("Invalid data");
                     return "Invalid Data";
                 }
@@ -277,8 +284,6 @@ public class LeastPathResistance {
 
         for (Node node111 : nodesinResultPath) {
             finalLeastPathString = finalLeastPathString + " " + (node111.getX() + 1);
-
-
         }
         System.out.println("Final Result is " + finalLeastPathString);
         return finalLeastPathString;

@@ -9,5 +9,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        new LeastPathResistance().printleastResistancePath("19 10 19 10 19 21 23 20 19 12 20 12 20 11 10",5,6);
     }
 }
